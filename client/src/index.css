@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+
+  color: var(--secondary);
+  background-color: var(--background);
+
+  --primary: #e95f45;
+  --red: #ee4f2f;
+  --secondary: #333333;
+  --background: #eeedf2;
+}
+
+::selection {
+  background-color: #e9604591;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+footer {
+  background: transparent;
+  display: flex;
+  justify-content: space-around;
+}
+
+h1 {
+  font-size: 72px;
+  line-height: 100%;
+}
+h2 {
+  font-size: 48px;
+  line-height: 100%;
+}
+h3 {
+  font-size: 24px;
+  line-height: 100%;
+}
+
+input {
+  font-size: 18px;
+  padding: 15px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  background-color: white;
+  color: var(--secondary);
+}
+
+button {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+
+  border: none;
+  border-radius: 100px;
+
+  padding: 0.4rem 1.5rem;
+
+  cursor: pointer;
+  color: var(--background);
+  background-color: var(--secondary);
+  transition: background-color 0.3s ease-in-out, scale 0.3s ease-in-out;
+}
+button:hover {
+  background-color: var(--primary);
+  scale: 1.1;
+}
+@media (max-width: 768px) {
+  :root {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 52px;
+  }
+  h2 {
+    font-size: 38px;
+  }
+  footer {
+    flex-direction: column;
+  }
+}
+@media (max-width: 425px) {
+  h1 {
+    font-size: 46px;
+  }
+  input{
+    font-size: 16px;
+  }
+}

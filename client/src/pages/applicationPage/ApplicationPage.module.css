@@ -1,0 +1,100 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.head {
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 1em;
+  margin-top: 0;
+}
+.image {
+  width: 40%;
+}
+.appForm {
+  width: 42%;
+  display: flex;
+  grid-gap: 1.5rem;
+  flex-direction: column;
+  button {
+    align-self: center;
+    width: 45%;
+    height: 60px;
+    font-size: 20px;
+  }
+}
+.authSect {
+  margin: 5rem 0;
+}
+.mask {
+  filter: blur(15px);
+  position: absolute;
+  width: 45%;
+  left: -10%;
+  top: 2.5%;
+  z-index: -1;
+}
+@media (max-width: 1440px) {
+  .authSect {
+    margin: 3rem 0;
+  }
+  .mask {
+    width: 50%;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    grid-gap: 2rem;
+  }
+  .appForm {
+    width: 50%;
+    grid-gap: 1.2rem;
+  }
+  .head {
+    font-size: 38px;
+  }
+  .authSect {
+    margin-top: 1rem;
+  }
+  .mask {
+    top: 15%;
+    width: 75%;
+  }
+}
+@media (max-width: 768px) {
+  .appForm {
+    width: 80%;
+    grid-gap: 1.2rem;
+  }
+  .image {
+    width: 60%;
+  }
+}
+@media (max-width: 425px) {
+  .container {
+    flex-direction: column;
+    grid-gap: 0.5rem;
+  }
+  .appForm {
+    width: 100%;
+    grid-gap: 1rem;
+    button {
+      height: 55px;
+    }
+  }
+  .image {
+    width: 80%;
+  }
+  .head {
+    font-size: 30px;
+  }
+  .authSect {
+    margin-bottom: 1rem;
+  }
+  .mask {
+    top: 20%;
+    width: 90%;
+  }
+}

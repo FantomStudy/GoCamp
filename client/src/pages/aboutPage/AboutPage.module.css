@@ -1,0 +1,88 @@
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.introImg {
+  width: 50%;
+  padding: 1rem 0;
+}
+.textBlock {
+  h1 {
+    margin: 0;
+  }
+}
+.introMask {
+  filter: blur(25px);
+  position: absolute;
+  right: 0;
+  top: -10%;
+  z-index: -1;
+}
+
+.descript {
+  padding: 5rem 0;
+}
+.descImg {
+  width: 40%;
+  padding: 3rem 0;
+}
+.descMaskLeft,
+.descMaskRight {
+  filter: blur(30px);
+  position: absolute;
+  z-index: -1;
+}
+.descMaskLeft {
+  left: 0;
+}
+.descMaskRight {
+  right: 0;
+}
+.descMaskLeft,
+.descMaskRight {
+  width: 45%;
+}
+@media (max-width: 1440px) {
+  .introMask,
+  .descMaskLeft,
+  .descMaskRight {
+    width: 40%;
+  }
+}
+@media (max-width: 1024px) {
+  .intro {
+    flex-direction: column-reverse;
+  }
+  .introImg {
+    width: 65%;
+  }
+  .textBlock {
+    width: 100%;
+  }
+  .descImg {
+    width: 50%;
+    padding: 2rem 0;
+  }
+}
+@media (max-width: 768px) {
+  .introImg {
+    width: 70%;
+    padding: 0;
+  }
+  .descImg {
+    width: 75%;
+    padding: 0;
+  }
+}
+@media (max-width: 425px) {
+  .descript {
+    padding: 2rem 0;
+  }
+  .introImg {
+    width: 300px;
+  }
+  .descImg {
+    width: 250px;
+  }
+}

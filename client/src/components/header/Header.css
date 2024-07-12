@@ -1,0 +1,120 @@
+header a {
+  text-decoration: none;
+  color: var(--secondary);
+  transition: color 0.3s ease-in-out;
+}
+header a:hover {
+  color: var(--primary);
+}
+.headerNav {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  width: 35%;
+  font-weight: 500;
+  padding: 0;
+  z-index: 1;
+  li {
+    transition: scale 0.3s ease-in-out;
+  }
+  li:hover {
+    scale: 1.2;
+  }
+}
+.logoText {
+  font-size: 46px;
+  font-weight: 500;
+  cursor: default;
+}
+.joinBurger{
+  display: none;
+}
+.burgerBtn {
+  display: none;
+}
+@media (max-width: 768px) {
+  .headerButton {
+    display: none;
+  }
+  .burgerBtn {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+
+    padding: 0;
+    z-index: 10;
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    background: transparent;
+    span {
+      width: 100%;
+      height: 6px;
+      border-radius: 10px;
+      transition: 0.3s ease-in-out;
+      background-color: var(--secondary);
+    }
+  }
+  .burgerBtn:hover {
+    background-color: transparent;
+  }
+  .burgerBtn.active {
+    span:nth-child(1) {
+      transform-origin: top right;
+      transform: translateX(-20%) rotate(-45deg);
+    }
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    span:nth-child(3) {
+      transform-origin: right bottom;
+      transform: translateX(-20%) rotate(45deg);
+    }
+  }
+  .headerNav {
+    display: flex;
+    grid-gap: 4rem;
+    flex-direction: column;
+    justify-content: center;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    margin: 0;
+    width: 70%;
+    height: 100%;
+
+    background-color: var(--background);
+    box-shadow: -10px 1px 8px 0px rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s all;
+    transform: translateX(100%);
+    .joinBurger{
+      display: block;
+    }
+    li {
+      font-size: 36px;
+      font-weight: 500;
+    }
+    li:hover{
+      scale: 1;
+    }
+    a:hover{
+      color: var(--secondary);
+    }
+  }
+  .headerNav.active {
+    transform: translateX(0);
+  }
+}
+@media (max-width: 425px) {
+  .logoText {
+    font-size: 36px;
+  }
+  .headerNav {
+    width: 100%;
+  }
+}

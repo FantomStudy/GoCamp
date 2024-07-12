@@ -1,0 +1,23 @@
+#root {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1rem;
+  padding-top: 0;
+  text-align: center;
+}
+
+@media (max-width: 1440px) {
+  #root {
+    max-width: 1024px;
+  }
+}
+@media (max-width: 1024px) {
+  #root {
+    max-width: 768px;
+  }
+}
+@media (max-width: 768px) {
+  #root {
+    max-width: 85%;
+  }
+}
