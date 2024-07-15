@@ -3,11 +3,11 @@ FROM node:lts-alpine AS build
 WORKDIR /app
 COPY package.json .
 RUN yarn install --no-optional --no-cache
-COPY . .
+
 # Stage 2: Copy code and run application
 FROM node:lts-alpine
 WORKDIR /app
 COPY --from=build /app/node_modules ./node_modules
-
+COPY . .
 EXPOSE 5173
 CMD ["yarn", "dev"]
