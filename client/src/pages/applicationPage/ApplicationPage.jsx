@@ -29,7 +29,7 @@ export default function ApplicationPage() {
     if (validateForm()) {
       try {
         const response = await axios.post(
-          "http://localhost:3000/api/register",
+          "http://localhost:8080/api/register",
           data
         );
         console.log("Success", response.data);

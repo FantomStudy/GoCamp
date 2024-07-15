@@ -1,10 +1,11 @@
 package main
 
 import (
-	"github.com/FantomStudy/GoCamp/database"
-	"github.com/FantomStudy/GoCamp/routes"
 	"log"
 	"os"
+
+	"github.com/FantomStudy/GoCamp/database"
+	"github.com/FantomStudy/GoCamp/routes"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
@@ -23,7 +24,7 @@ func main()  {
 	port:=os.Getenv("PORT")
 	app:= fiber.New()
 	app.Use(cors.New(cors.Config{
-		AllowOrigins: "http://localhost:5173", // Разрешенные домены
+		AllowOrigins: "http://localhost:5173, https://fantomstudy.github.io", // Разрешенные домены
 		AllowMethods: "GET,POST,PUT,DELETE,OPTIONS", // Разрешенные методы
 		AllowHeaders: "Content-Type, Authorization",}))
 	routes.Setup(app)

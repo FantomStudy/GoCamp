@@ -1,0 +1,19 @@
+# Изображение основы
+FROM golang:1.22.3-alpine
+
+# Установка зависимостей
+WORKDIR /app
+COPY go.mod go.sum ./
+RUN go mod download
+
+# Копирование исходного кода
+COPY . .
+
+# Построение приложения
+RUN go build -o main .
+
+# Определение точки входа
+CMD ["/app/main"]
+
+# Вывод логов
+EXPOSE 8080

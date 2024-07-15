@@ -1,0 +1,22 @@
+# Stage 1: Build and install dependencies
+FROM node:lts-alpine AS build
+
+WORKDIR /app
+
+COPY package.json .
+
+RUN yarn install --prod --no-optional --no-cache
+
+COPY . .
+
+
+# Stage 2: Copy code and run application
+FROM node:lts-alpine
+
+WORKDIR /app
+
+COPY --from=build /app/node_modules ./node_modules
+
+EXPOSE 5173
+
+CMD ["yarn", "dev"]
